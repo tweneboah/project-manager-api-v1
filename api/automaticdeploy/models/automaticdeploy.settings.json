@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "automaticdeploys",
+  "info": {
+    "name": "automaticdeploy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "z": {
+      "type": "string"
+    }
+  }
+}
