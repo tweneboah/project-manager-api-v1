@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "incomes",
+  "info": {
+    "name": "income"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "project": {
+      "via": "incomes",
+      "model": "project"
+    }
+  }
+}

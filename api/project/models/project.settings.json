@@ -30,6 +30,23 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "project_todos": {
+      "collection": "project-todo",
+      "via": "project"
+    },
+    "expenses": {
+      "collection": "expense",
+      "via": "project"
+    },
+    "incomes": {
+      "collection": "income",
+      "via": "project"
+    },
+    "user": {
+      "via": "projects",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `trying` model.
+ * Lifecycle callbacks for the `expense` model.
  */
 
 module.exports = {

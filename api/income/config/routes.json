@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/tryings",
-      "handler": "trying.find",
+      "path": "/incomes",
+      "handler": "income.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/tryings/count",
-      "handler": "trying.count",
+      "path": "/incomes/count",
+      "handler": "income.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/tryings/:id",
-      "handler": "trying.findOne",
+      "path": "/incomes/:id",
+      "handler": "income.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/tryings",
-      "handler": "trying.create",
+      "path": "/incomes",
+      "handler": "income.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/tryings/:id",
-      "handler": "trying.update",
+      "path": "/incomes/:id",
+      "handler": "income.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/tryings/:id",
-      "handler": "trying.delete",
+      "path": "/incomes/:id",
+      "handler": "income.delete",
       "config": {
         "policies": []
       }

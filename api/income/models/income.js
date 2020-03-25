@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `automaticdeploy` model.
+ * Lifecycle callbacks for the `income` model.
  */
 
 module.exports = {

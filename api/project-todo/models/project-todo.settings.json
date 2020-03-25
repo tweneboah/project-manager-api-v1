@@ -1,17 +1,21 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "automaticdeploys",
+  "collectionName": "project_todos",
   "info": {
-    "name": "automaticdeploy"
+    "name": "projectTodo"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "z": {
+    "content": {
       "type": "string"
+    },
+    "project": {
+      "via": "project_todos",
+      "model": "project"
     }
   }
 }

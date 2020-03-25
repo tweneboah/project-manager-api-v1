@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/automaticdeploys",
-      "handler": "automaticdeploy.find",
+      "path": "/expenses",
+      "handler": "expense.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/automaticdeploys/count",
-      "handler": "automaticdeploy.count",
+      "path": "/expenses/count",
+      "handler": "expense.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/automaticdeploys/:id",
-      "handler": "automaticdeploy.findOne",
+      "path": "/expenses/:id",
+      "handler": "expense.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/automaticdeploys",
-      "handler": "automaticdeploy.create",
+      "path": "/expenses",
+      "handler": "expense.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/automaticdeploys/:id",
-      "handler": "automaticdeploy.update",
+      "path": "/expenses/:id",
+      "handler": "expense.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/automaticdeploys/:id",
-      "handler": "automaticdeploy.delete",
+      "path": "/expenses/:id",
+      "handler": "expense.delete",
       "config": {
         "policies": []
       }
