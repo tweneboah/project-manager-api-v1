@@ -14,8 +14,13 @@
       "type": "string"
     },
     "project": {
+      "model": "project",
+      "via": "project_todos"
+    },
+    "user": {
       "via": "project_todos",
-      "model": "project"
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -54,15 +54,27 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "image": {
+    "projects": {
+      "collection": "project",
+      "via": "user"
+    },
+    "incomes": {
+      "collection": "income",
+      "via": "user"
+    },
+    "expenses": {
+      "collection": "expense",
+      "via": "user"
+    },
+    "project_todos": {
+      "collection": "project-todo",
+      "via": "user"
+    },
+    "picture": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
-    },
-    "projects": {
-      "collection": "project",
-      "via": "user"
     }
   }
 }

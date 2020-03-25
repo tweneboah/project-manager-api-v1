@@ -20,8 +20,13 @@
       "type": "integer"
     },
     "project": {
+      "model": "project",
+      "via": "expenses"
+    },
+    "user": {
       "via": "expenses",
-      "model": "project"
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

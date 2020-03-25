@@ -25,23 +25,17 @@
         "Other"
       ]
     },
-    "image": {
-      "collection": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": false
-    },
     "project_todos": {
-      "collection": "project-todo",
-      "via": "project"
+      "via": "project",
+      "collection": "project-todo"
     },
     "expenses": {
-      "collection": "expense",
-      "via": "project"
+      "via": "project",
+      "collection": "expense"
     },
     "incomes": {
-      "collection": "income",
-      "via": "project"
+      "via": "project",
+      "collection": "income"
     },
     "user": {
       "via": "projects",
