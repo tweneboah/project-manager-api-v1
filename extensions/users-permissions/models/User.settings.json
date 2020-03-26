@@ -63,8 +63,8 @@
       "via": "user"
     },
     "expenses": {
-      "collection": "expense",
-      "via": "user"
+      "via": "user",
+      "collection": "expense"
     },
     "project_todos": {
       "collection": "project-todo",
@@ -75,6 +75,11 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "code": {
+      "type": "string",
+      "required": false,
+      "unique": false
     }
   }
 }

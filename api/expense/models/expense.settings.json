@@ -24,9 +24,27 @@
       "via": "expenses"
     },
     "user": {
-      "via": "expenses",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "expenses"
+    },
+    "like": {
+      "type": "integer"
+    },
+    "receipt": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "merchant_contact": {
+      "type": "string"
+    },
+    "merchant_name": {
+      "type": "string"
+    },
+    "confirm": {
+      "type": "boolean"
     }
   }
 }
