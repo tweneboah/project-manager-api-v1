@@ -67,8 +67,8 @@
       "collection": "expense"
     },
     "project_todos": {
-      "collection": "project-todo",
-      "via": "user"
+      "via": "user",
+      "collection": "project-todo"
     },
     "picture": {
       "model": "file",
@@ -80,6 +80,10 @@
       "type": "string",
       "required": false,
       "unique": false
+    },
+    "comments": {
+      "via": "user",
+      "collection": "comment"
     }
   }
 }

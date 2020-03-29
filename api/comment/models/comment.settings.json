@@ -1,26 +1,26 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "project_todos",
+  "collectionName": "comments",
   "info": {
-    "name": "projectTodo"
+    "name": "comment"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "content": {
+    "message": {
       "type": "string"
     },
-    "project": {
-      "model": "project",
-      "via": "project_todos"
+    "expense": {
+      "model": "expense",
+      "via": "comments"
     },
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "project_todos"
+      "via": "comments"
     }
   }
 }

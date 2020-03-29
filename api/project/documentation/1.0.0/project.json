@@ -598,6 +598,12 @@
                 },
                 "confirm": {
                   "type": "boolean"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -693,6 +699,12 @@
               },
               "code": {
                 "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

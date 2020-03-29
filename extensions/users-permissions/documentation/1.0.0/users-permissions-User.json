@@ -1355,6 +1355,12 @@
                 },
                 "confirm": {
                   "type": "boolean"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -1429,6 +1435,28 @@
           },
           "code": {
             "type": "string"
+          },
+          "comments": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "expense": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1493,6 +1521,12 @@
           },
           "code": {
             "type": "string"
+          },
+          "comments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

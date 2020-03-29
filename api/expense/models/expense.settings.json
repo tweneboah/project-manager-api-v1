@@ -45,6 +45,10 @@
     },
     "confirm": {
       "type": "boolean"
+    },
+    "comments": {
+      "via": "expense",
+      "collection": "comment"
     }
   }
 }
