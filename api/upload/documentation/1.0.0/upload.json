@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/tryings": {
+    "/uploads": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Trying"
+                    "$ref": "#/components/schemas/Upload"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTrying"
+                "$ref": "#/components/schemas/NewUpload"
               }
             }
           }
         }
       }
     },
-    "/tryings/count": {
+    "/uploads/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": []
       }
     },
-    "/tryings/{id}": {
+    "/uploads/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTrying"
+                "$ref": "#/components/schemas/NewUpload"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Trying": {
+      "Upload": {
         "required": [
           "id"
         ],
@@ -522,15 +522,86 @@
           "id": {
             "type": "string"
           },
-          "wow": {
+          "title": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "file": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "document",
+              "image",
+              "video"
+            ]
           }
         }
       },
-      "NewTrying": {
+      "NewUpload": {
         "properties": {
-          "wow": {
+          "title": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "document",
+              "image",
+              "video"
+            ]
           }
         }
       }
@@ -538,7 +609,7 @@
   },
   "tags": [
     {
-      "name": "Trying"
+      "name": "Upload"
     }
   ]
 }

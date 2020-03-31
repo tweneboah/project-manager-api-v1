@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "uploads",
+  "info": {
+    "name": "upload"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "file": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "document",
+        "image",
+        "video"
+      ]
+    }
+  }
+}

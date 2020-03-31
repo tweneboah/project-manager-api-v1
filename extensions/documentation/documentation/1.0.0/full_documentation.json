@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/29/2020 2:39:52 PM"
+    "x-generation-date": "03/31/2020 2:01:47 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -555,6 +555,313 @@
         ]
       }
     },
+    "/email": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the email's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve email document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Email"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single email record",
+        "responses": {
+          "200": {
+            "description": "Retrieve email document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Email"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewEmail"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single email record",
+        "responses": {
+          "200": {
+            "description": "deletes a single email based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Email"
+        ],
+        "parameters": []
+      }
+    },
     "/expenses": {
       "get": {
         "deprecated": false,
@@ -1064,6 +1371,63 @@
             }
           }
         ]
+      }
+    },
+    "/hello": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Hello"
+        ],
+        "parameters": []
       }
     },
     "/incomes": {
@@ -2612,7 +2976,7 @@
         ]
       }
     },
-    "/tryings": {
+    "/uploads": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2624,7 +2988,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Trying"
+                    "$ref": "#/components/schemas/Upload"
                   }
                 }
               }
@@ -2663,7 +3027,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -2813,7 +3177,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -2851,7 +3215,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "requestBody": {
           "description": "",
@@ -2859,14 +3223,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTrying"
+                "$ref": "#/components/schemas/NewUpload"
               }
             }
           }
         }
       }
     },
-    "/tryings/count": {
+    "/uploads/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2918,12 +3282,12 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": []
       }
     },
-    "/tryings/{id}": {
+    "/uploads/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2933,7 +3297,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -2971,7 +3335,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -2995,7 +3359,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Trying"
+                  "$ref": "#/components/schemas/Upload"
                 }
               }
             }
@@ -3033,7 +3397,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "requestBody": {
           "description": "",
@@ -3041,7 +3405,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTrying"
+                "$ref": "#/components/schemas/NewUpload"
               }
             }
           }
@@ -3107,7 +3471,7 @@
         },
         "summary": "",
         "tags": [
-          "Trying"
+          "Upload"
         ],
         "parameters": [
           {
@@ -5425,6 +5789,19 @@
           }
         }
       },
+      "Email": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "NewEmail": {
+        "properties": {}
+      },
       "Expense": {
         "required": [
           "id"
@@ -6197,7 +6574,7 @@
           }
         }
       },
-      "Trying": {
+      "Upload": {
         "required": [
           "id"
         ],
@@ -6205,15 +6582,86 @@
           "id": {
             "type": "string"
           },
-          "wow": {
+          "title": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "file": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "document",
+              "image",
+              "video"
+            ]
           }
         }
       },
-      "NewTrying": {
+      "NewUpload": {
         "properties": {
-          "wow": {
+          "title": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "document",
+              "image",
+              "video"
+            ]
           }
         }
       },
@@ -6752,7 +7200,13 @@
       "name": "Comment"
     },
     {
+      "name": "Email"
+    },
+    {
       "name": "Expense"
+    },
+    {
+      "name": "Hello"
     },
     {
       "name": "Income"
@@ -6761,7 +7215,7 @@
       "name": "Project"
     },
     {
-      "name": "Trying"
+      "name": "Upload"
     },
     {
       "name": "Email - Email"

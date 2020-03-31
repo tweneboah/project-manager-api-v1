@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "connection": "default",
+  "collectionName": "email_lists",
+  "info": {
+    "name": "email"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    }
+  }
+}
